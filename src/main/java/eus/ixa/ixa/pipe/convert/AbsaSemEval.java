@@ -518,6 +518,7 @@ public class AbsaSemEval {
                   endIndex = i + 1;
                 }
               }
+             if (startIndex<=endIndex){
               List<String> wfIds = Arrays
                   .asList(Arrays.copyOfRange(tokenIds, startIndex, endIndex));
               List<String> wfTermIds = getWFIdsFromTerms(sentTerms);
@@ -529,6 +530,7 @@ public class AbsaSemEval {
                 Entity neEntity = kaf.newEntity(references);
                 neEntity.setType("term");
               }
+          }
           }
           }
         }
